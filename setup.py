@@ -10,7 +10,7 @@ from setuptools import setup
 
 setup(
     name='Flask-Rev',
-    version='0.1',
+    version='0.1.1',
     url='http://example.com/flask-sqlite3/',
     license='BSD',
     author='Italo Maia',
