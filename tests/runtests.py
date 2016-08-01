@@ -13,15 +13,22 @@ else:
 
 class CacheTestCase(unittest.TestCase):
 
-    def setUp(self):
+    def init_app(self, debug):
         app = self.app = Flask(__name__)
-        app.debug = False
-        self.rev = Rev(app)
+        app.debug = debug
+        Rev(app)
 
     def test_plain_url_for(self):
+        self.init_app(False)
         with self.app.test_request_context():
             uri = url_for('static', filename='example.css')
             self.assertEqual(uri, '/static/example.css?h=981e0d36a18745ecf9607812379348ff')
+
+    def test_does_nothing_in_debug_mode(self):
+        self.init_app(True)
+        with self.app.test_request_context():
+            uri = url_for('static', filename='example.css')
+            self.assertEqual(uri, '/static/example.css')
 
 
 if __name__ == '__main__':

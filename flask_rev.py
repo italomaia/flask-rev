@@ -13,6 +13,8 @@ class Rev(object):
             self.init_app(app)
 
     def init_app(self, app):
+        if app.debug: return
+
         @app.url_defaults
         def hashed_url_for_static_file(endpoint, values):
             if 'static' == endpoint or endpoint.endswith('.static'):
