@@ -29,7 +29,3 @@ class CacheTestCase(unittest.TestCase):
         with self.app.test_request_context():
             uri = url_for('static', filename='example.css')
             self.assertEqual(uri, '/static/example.css')
-
-
-if __name__ == '__main__':
-    unittest.main()
