@@ -21,6 +21,7 @@ setup(
     # if you would be using a package instead use packages instead
     # of py_modules:
     # packages=['flask_rev'],
+    test_suite='tests.runtests',
     zip_safe=False,
     include_package_data=True,
     platforms='any',
