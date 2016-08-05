@@ -1,6 +1,7 @@
 __pycache__
-build/
-dist/
+/build/
+/dist/
+/docs/_build
 *.egg-info/
 .idea
 *.pyc
