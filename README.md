@@ -1,16 +1,18 @@
+![travis status](https://travis-ci.org/italomaia/flask-rev.svg?branch=master)
+
 # Flask-Rev
 
 Flask-Rev is a very simple flask extension that aims to make it easier to integrate
 flask and those fancy reactive javascript front-ends out there (react, angular, vuejs...).
  It allows you to keep an aggressive cache with your HTTP server **AND** always return fresh
- static content to user requests. It does so by appending the static file hash to the static 
- file's url as a query string parameter. 
- 
+ static content to user requests. It does so by appending the static file hash to the static
+ file's url as a query string parameter.
+
  Notice that appending the hash only happens when debug mode is False. Also, be aware
   that the hash cache is created during runtime. So, you may experience some
-  "warming up" slow-down in the first request. This behavior might change in the 
+  "warming up" slow-down in the first request. This behavior might change in the
   future.
- 
+
  **The advantage of this approach**? Your static files
  names won't change between updates.
 
