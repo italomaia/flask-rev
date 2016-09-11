@@ -11,7 +11,7 @@ from setuptools import setup
 setup(
     name='Flask-Rev',
     version='0.1.1',
-    url='http://example.com/flask-sqlite3/',
+    url='https://github.com/italomaia/flask-rev',
     license='BSD',
     author='Italo Maia',
     author_email='italo.maia@gmail.com',
@@ -23,7 +23,6 @@ setup(
     # packages=['flask_rev'],
     test_suite='tests.runtests',
     zip_safe=False,
-    include_package_data=True,
     platforms='any',
     install_requires=[
         'Flask'
