@@ -1,5 +1,9 @@
 """
-Main module.
+    Flask Rev
+    ~~~~~~~~~
+
+    Simple plugin that makes it easy to avoid reading old
+    cached static files from the http server.
 """
 
 from flask.helpers import safe_join
