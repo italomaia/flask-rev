@@ -1,17 +1,47 @@
-.. Flask-Rev documentation master file, created by
-   sphinx-quickstart on Thu Aug  4 23:20:04 2016.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+Flask-Rev
+=========
 
-Welcome to Flask-Rev's documentation!
-=====================================
+.. module:: flask_rev
 
-Contents:
+Flask-Rev is an extension to `Flask` that makes it easy
+to avoid cache invalidation problems that happens when you
+have a aggressive cache police for your **static files**.
 
-.. toctree::
-   :maxdepth: 2
+How it works
+------------
 
+Flask Rev patches url_for in a manner that, whenever
+you construct a url for a static file, it appends the
+file's hash to the end of the url. This way, your static
+file server will receive a different request whenever
+the static file is changed.
 
+Also, be aware that flask-rev does *nothing* in debug
+mode. This might change to something configurable, but
+of now, this is how it is.
+
+Installation
+------------
+
+**Pi**m**p** your way up::
+
+  $ pip install Flask-Rev
+
+How to Use
+----------
+
+Just initialize the extension and you're ready to go::
+
+  from flask.rev import Rev
+  Rev(app)
+
+Changes
+-------
+
+0.1.1
+```
+
+-   MVP is ready.
 
 Indices and tables
 ==================
@@ -19,4 +49,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
