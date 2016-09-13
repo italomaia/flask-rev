@@ -10,7 +10,7 @@ from setuptools import setup
 
 setup(
     name='Flask-Rev',
-    version='0.1.1',
+    version='0.1.2',
     url='https://github.com/italomaia/flask-rev',
     license='BSD',
     author='Italo Maia',
