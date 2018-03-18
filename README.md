@@ -28,7 +28,7 @@ Thanks!
 pip install flask-rev
 
 ## Usage
-```
+```py
 from flask import Flask, url_for
 from flask_rev import Rev
 
