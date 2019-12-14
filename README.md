@@ -43,4 +43,6 @@ url_for('static', filename='bundle.js')
 
 ```bash
 > python3 setup.py test
+> # or
+> tox
 ```
