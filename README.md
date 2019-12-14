@@ -38,3 +38,9 @@ Rev(app)
 url_for('static', filename='bundle.js')
 # outputs: /static/bundle.js?h=<md5hash>
 ```
+
+## Running Tests
+
+```bash
+> python3 setup.py test
+```
