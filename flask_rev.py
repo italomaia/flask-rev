@@ -80,7 +80,7 @@ class Rev(object):
         :param filepath: path to static file
         :type filepath: str
         """
-        hasher = hashlib.md5()
+        hasher = hashlib.md5()  # nosec: B303
 
         with contextlib.closing(open(filepath, 'rb')) as file:
             hasher.update(file.read())
